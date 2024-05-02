@@ -23,19 +23,20 @@
         <hr>
         <div class="container">
           <% @booking.reviews.each do |review| %>
-            <% review.rating.times do %>
-              <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <%= review.rating.times do %>
+              <i class="fa fa-star" style="color: #FFD43B;"></i>
             <% end %>
-            <% (5 - review.rating).times do %>
-              <i class="fa-thin fa-star" style="color: #000000;"></i>
+            <%= (5 - review.rating).times do %>
+              <i class="fa fa-star-o" style="color: #000000;"></i>
             <% end %>
-
-            <h3>Guest Favorite</h3>
-            <hr>
-            <div class="col-6">
-              <%= review.content %>
-            </div>
           <% end %>
+          <h3>Popular Planet</h3>
+          <hr>
+          <div class="col-6">
+            <% @planet_reviews.each do |review| %>
+              <%= review.content %>
+            <% end %>
+          </div>
         </div>
 
       </div>

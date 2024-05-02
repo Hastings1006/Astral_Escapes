@@ -216,7 +216,7 @@ puts "---------------------------------"
 
 puts "Creating 3 bookings..."
 
-Booking.create!(visitor_id: 1, planet_id: 38, start_date: "2544-05-09", end_date: "2544-05-31", status: "Unconfirmed")
+Booking.create!(visitor: User.first, planet: Planet.last, start_date: "2544-05-09", end_date: "2544-05-31", status: "Unconfirmed")
 Booking.create!(visitor_id: 1, planet_id: 31, start_date: "2544-06-22", end_date: "2544-07-22", status: "Unconfirmed")
 Booking.create!(visitor_id: 1, planet_id: 7, start_date: "2544-12-01", end_date: "2544-12-31", status: "Confirmed")
 
