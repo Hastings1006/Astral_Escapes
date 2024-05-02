@@ -73,7 +73,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_02_123328) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "bookings_id", null: false
-    t.index ["bookings_id"], name: "index_reviews_on_booking_id"
+    t.index ["bookings_id"], name: "index_reviews_on_bookings_id"
   end
 
   create_table "users", force: :cascade do |t|
